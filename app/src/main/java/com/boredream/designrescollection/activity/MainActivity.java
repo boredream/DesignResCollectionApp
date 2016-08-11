@@ -78,6 +78,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
                 break;
             case R.id.rb4:
                 controller.showFragment(3);
+                break;
         }
     }
 

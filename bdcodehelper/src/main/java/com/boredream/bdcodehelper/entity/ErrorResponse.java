@@ -1,4 +1,4 @@
-package com.boredream.designrescollection.entity;
+package com.boredream.bdcodehelper.entity;
 
 public class ErrorResponse {
 

@@ -6,7 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.boredream.bdcodehelper.base.BoreBaseActivity;
-import com.boredream.designrescollection.activity.LoginActivity;
+import com.boredream.designrescollection.activity.login.LoginActivity;
 import com.boredream.designrescollection.activity.MainActivity;
 import com.boredream.designrescollection.constants.CommonConstants;
 

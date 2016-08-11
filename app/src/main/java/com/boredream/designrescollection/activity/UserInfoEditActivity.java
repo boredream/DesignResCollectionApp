@@ -108,7 +108,7 @@ public class UserInfoEditActivity extends BaseActivity implements View.OnClickLi
 
         Observable<BaseEntity> observable = HttpRequest.getApiService().updateUserById(
                 currentUser.getObjectId(), updateMap);
-        ObservableDecorator.decorate(this, observable)
+        ObservableDecorator.decorate(observable)
                 .subscribe(new SimpleSubscriber<BaseEntity>(this) {
                     @Override
                     public void onNext(BaseEntity entity) {

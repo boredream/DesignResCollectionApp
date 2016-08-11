@@ -61,7 +61,7 @@ public class UpdateUtils {
         }
 
         Observable<ListResponse<AppUpdateInfo>> observable = HttpRequest.getApiService().getAppUpdateInfo();
-        ObservableDecorator.decorate(context, observable).subscribe(
+        ObservableDecorator.decorate(observable).subscribe(
                 new SimpleSubscriber<ListResponse<AppUpdateInfo>>(context) {
                     @Override
                     public void onError(Throwable throwable) {

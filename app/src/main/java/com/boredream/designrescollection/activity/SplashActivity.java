@@ -42,7 +42,7 @@ public class SplashActivity extends BaseActivity {
         // 自动登录
         final long starTime = System.currentTimeMillis();
         Observable<User> observable = HttpRequest.loginByToken(loginData);
-        ObservableDecorator.decorate(this, observable)
+        ObservableDecorator.decorate(observable)
                 // 设置超时时间,如果接口调用耗时超过最大值,也视为登录失败。防止页面停留时间过长
                 .timeout(SPLASH_DUR_MAX_TIME, TimeUnit.MILLISECONDS)
                 .subscribe(new Subscriber<User>() {

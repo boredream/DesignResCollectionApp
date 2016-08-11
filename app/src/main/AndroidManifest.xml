@@ -31,6 +31,7 @@
             android:launchMode="singleTask" />
         <activity android:name=".activity.PhoneValidateStep1Activity" />
         <activity android:name=".activity.PhoneValidateStep2Activity" />
+        <activity android:name=".activity.login.LoginActivity" />
         <activity android:name=".activity.SettingActivity" />
         <activity android:name=".activity.WriteCommentActivity" />
         <activity android:name=".activity.AboutActivity" />

@@ -1,12 +1,11 @@
-package com.boredream.designrescollection.constants;
-
-import android.text.TextUtils;
+package com.boredream.bdcodehelper.net;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class ErrorConstants {
     public static Map<Integer, String> errors;
+
     static {
         errors = new HashMap<>();
         errors.put(9001, "Application Id为空，请初始化.");
@@ -102,15 +101,5 @@ public class ErrorConstants {
         errors.put(10011, "该账户无可用的发送短信条数");
         errors.put(10012, "身份信息必须审核通过才能使用该功能");
         errors.put(10013, "非法短信内容");
-
-    }
-
-    public static CharSequence getErrorMsg(int code) {
-        String s = errors.get(code);
-        if(TextUtils.isEmpty(s)) {
-            return "未知错误，错误代码：" + code;
-        } else {
-            return s;
-        }
     }
 }

@@ -9,12 +9,11 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.boredream.bdcodehelper.utils.ToastUtils;
-import com.boredream.designrescollection.activity.MainActivity;
 
 public abstract class BaseFragment extends Fragment {
 
     protected String TAG;
-    protected MainActivity activity;
+    protected BaseActivity activity;
     // progressDialog/sp/application 等使用activity.xx 调用
 
     @Override
@@ -23,7 +22,7 @@ public abstract class BaseFragment extends Fragment {
 
         TAG = getClass().getSimpleName();
 
-        activity = (MainActivity) getActivity();
+        activity = (BaseActivity) getActivity();
     }
 
     protected void intent2Activity(Class<? extends Activity> tarActivity) {

@@ -67,7 +67,7 @@ public class FeedBackActivity extends BaseActivity {
 
         showProgressDialog();
         Observable<BaseEntity> observable = HttpRequest.getApiService().addFeedBack(fb);
-        ObservableDecorator.decorate(this, observable).subscribe(
+        ObservableDecorator.decorate(observable).subscribe(
                 new SimpleSubscriber<BaseEntity>(this) {
                     @Override
                     public void onNext(BaseEntity entity) {

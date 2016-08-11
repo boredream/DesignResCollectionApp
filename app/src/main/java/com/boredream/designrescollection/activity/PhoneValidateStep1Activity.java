@@ -85,7 +85,7 @@ public class PhoneValidateStep1Activity extends BaseActivity implements View.OnC
         Map<String, Object> params = new HashMap<>();
         params.put("mobilePhoneNumber", phone);
         Observable<Object> observable = HttpRequest.getApiService().requestSmsCode(params);
-        ObservableDecorator.decorate(this, observable)
+        ObservableDecorator.decorate(observable)
                 .subscribe(new SimpleSubscriber<Object>(this) {
                     @Override
                     public void onNext(Object o) {

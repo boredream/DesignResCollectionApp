@@ -321,7 +321,7 @@ public class HttpRequest {
                         RequestBody requestBody = RequestBody.create(MediaType.parse("image/jpeg"), resource);
 
                         Observable<FileUploadResponse> observable = service.fileUpload(filename, requestBody);
-                        ObservableDecorator.decorate(context, observable)
+                        ObservableDecorator.decorate(observable)
                                 .subscribe(call);
                     }
 
