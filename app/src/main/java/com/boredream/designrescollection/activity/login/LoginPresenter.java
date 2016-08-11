@@ -30,12 +30,12 @@ public class LoginPresenter implements LoginContract.Presenter {
     @Override
     public void login(String username, String password) {
         if (TextUtils.isEmpty(username)) {
-            loginView.loginError(false, "用户名不能为空");
+            loginView.loginError("用户名不能为空");
             return;
         }
 
         if (TextUtils.isEmpty(password)) {
-            loginView.loginError(false, "密码不能为空");
+            loginView.loginError("密码不能为空");
             return;
         }
 
@@ -53,12 +53,16 @@ public class LoginPresenter implements LoginContract.Presenter {
                     public void onError(Throwable e) {
                         super.onError(e);
 
+                        loginView.dismissProgress();
+
                         String error = ErrorInfoUtils.parseHttpErrorInfo(e);
-                        loginView.loginError(true, error);
+                        loginView.loginError(error);
                     }
 
                     @Override
                     public void onNext(User user) {
+                        loginView.dismissProgress();
+
                         loginView.loginSuccess(user);
                     }
                 });

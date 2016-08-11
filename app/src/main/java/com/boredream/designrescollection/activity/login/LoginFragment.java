@@ -87,6 +87,11 @@ public class LoginFragment extends BaseFragment implements LoginContract.View, V
     }
 
     @Override
+    public void dismissProgress() {
+        dismissProgressDialog();
+    }
+
+    @Override
     public void loginSuccess(User user) {
         dismissProgressDialog();
 
@@ -98,11 +103,7 @@ public class LoginFragment extends BaseFragment implements LoginContract.View, V
     }
 
     @Override
-    public void loginError(boolean isNetError, String message) {
-        if (isNetError) {
-            dismissProgressDialog();
-        }
-
+    public void loginError(String message) {
         showToast(message);
     }
 

@@ -13,9 +13,11 @@ public interface LoginContract {
 
         void showProgress();
 
+        void dismissProgress();
+
         void loginSuccess(User user);
 
-        void loginError(boolean isNetError, String message);
+        void loginError(String message);
 
         boolean isActive();
     }
