@@ -103,7 +103,7 @@ public class LoginFragment extends BaseFragment implements LoginContract.View, V
     }
 
     @Override
-    public void loginError(String message) {
+    public void showErrorToast(String message) {
         showToast(message);
     }
 

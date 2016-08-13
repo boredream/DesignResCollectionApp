@@ -36,6 +36,6 @@ public class LoginActivity extends BaseActivity {
             ActivityUtils.addFragmentToActivity(getSupportFragmentManager(), loginFragment, R.id.fl_content);
         }
 
-        new LoginPresenter(this, loginFragment);
+        new LoginPresenter(loginFragment);
     }
 }

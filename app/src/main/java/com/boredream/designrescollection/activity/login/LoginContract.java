@@ -17,7 +17,7 @@ public interface LoginContract {
 
         void loginSuccess(User user);
 
-        void loginError(String message);
+        void showErrorToast(String message);
 
         boolean isActive();
     }
